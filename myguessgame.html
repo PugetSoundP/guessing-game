@@ -1,33 +1,27 @@
-<!-- // How many day are left in the year 2015 (current date 5/30/15) (246 days answer) -->
+
 <script>
 	(function()  {
-		var answer = '246';
-		var guess = prompt ('How many days are left in the current calender year?');
-		// while (answer != 246) {
-		// 	guess =	Number.parseInt(guess); }
-		// while (true) 
-		// 	if ()
-		// 		(guess > 246)
-		// 		alert ('Sorry thats not the right answer. Hint less days')
-		// 		break;
-		// 		else if (guess < 246)
-		// 		prompt('Sorry not quite, guess again')
+		var answer = 246;
+		var guess = prompt('How many days are left in the current calender year?');
+		var guesscounter = 0;
+		guess = Number.parseInt(guess);
+		while (guesscounter <=3) {
+			if (guess === answer) {
+				alert('Congratulations! You won!');
+				break;
+			} else if (guess < answer) {
+				guess = Number.parseInt(prompt('You\'re guess is too low, guess again'));
+			} else if (guess > answer) {
+				guess = Number.parseInt(prompt('You\'re answer is too high, guess again.'));
+			} else if (isNaN(guess)) {
+				guess = Number.parseInt(prompt('That is not a number, try again'));
+			}
+guesscounter++;
+}
+
+alert('You are out of guesses, goodbye.');
 
 
-		// 		alert('Correct! way to go!')
-		if (answer == guess) {
-			alert('Wahooo!! your correct!');
-		} else if (answer > guess) {
-			alert('Sorry you guess is less than the answer');
-		} else if (answer < guess){
-			alert('Sorry that\'s too high');
-		} else {
-			alert('random');
-		}
-
-
-
-
-}());
+})();
 
 </script>
