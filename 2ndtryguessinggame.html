@@ -1,0 +1,32 @@
+// guessing game
+<script>
+	(function() {
+	 	var today = new Date();
+	 	console.log(today);
+  		var guess = prompt('How many days are left in the current calender year?');
+  		guess = parseInt(guess);
+		var	mktime = new Date('01/01/2016');
+		console.log(mktime);
+		var answer = Math.floor((mktime - today)/86400000);
+		console.log(answer);
+		var	strtodate = (mktime);
+		for (var i = 1; i <5; i++) {
+			if (guess === answer) {
+				alert('Congratulations! That\'s it! What a guess!!!');
+				break;
+			} else if (guess < answer) {
+					guess = Number.parseInt(prompt('You\'re guess is too low, guess again'));
+			}	else if (guess > answer) {
+					guess = Number.parseInt(prompt('You\'re answer is too high, guess again.'));
+			} else if (isNaN(guess)) {
+					guess = Number.parseInt(prompt('That is not a number, try again')); 
+			}
+		}
+				
+		var arr = ['guess1', 'guess2', 'guess3', 'guess4'];
+		 {
+			console.log(arr[i]);
+		}
+		console.log(i);
+	})(); 
+</script>
